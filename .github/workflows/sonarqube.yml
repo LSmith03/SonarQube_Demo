@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'temurin' # AdoptOpenJDK has been moved to the Eclipse Temurin project.
         
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@master
@@ -26,5 +26,6 @@ jobs:
         SONAR_HOST_URL: 'http://your_sonarqube_server_url'
       with:
         args: >
-          -Dsonar.projectKey=
+          -Dsonar.projectKey=SonarTester
           -Dsonar.sources=.
+          -Dsonar.java.binaries=target/classes
