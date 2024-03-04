@@ -23,7 +23,7 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: 'http://your_sonarqube_server_url'
+        SONAR_HOST_URL: ''
       with:
         args: >
           -Dsonar.projectKey=SonarTester
